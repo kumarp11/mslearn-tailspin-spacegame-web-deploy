@@ -73,7 +73,7 @@ condition: |
     and
     (
       succeeded(),
-      eq(variables['Build.SourceBranchName'], variables['releaseBranchName'])
+      eq($(Build.SourceBranchName), $('releaseBranchName'))
     )
   jobs:
   - deployment: Deploy
